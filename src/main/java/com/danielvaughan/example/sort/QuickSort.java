@@ -7,10 +7,9 @@ public class QuickSort implements Sort {
         int wall = 0;
         int last = array.length - 1;
         while (wall < last) {
-            int pivot = array[last];
-            for (int currentElement = wall; currentElement < array.length - 1; currentElement++) {
-                if (array[currentElement] < pivot) {
-                    array = switchElement(array, currentElement, wall);
+            for (int pos = wall; pos < last; pos++) {
+                if (array[pos] < array[last]) {
+                    array = switchElement(array, pos, wall);
                     wall++;
                 }
             }
@@ -19,10 +18,10 @@ public class QuickSort implements Sort {
         return array;
     }
 
-    private int[] switchElement(int[] array, int currentElement, int wall) {
+    private int[] switchElement(int[] array, int pos, int wall) {
         int wallElement = array[wall];
-        array[wall] = array[currentElement];
-        array[currentElement] = wallElement;
+        array[wall] = array[pos];
+        array[pos] = wallElement;
         return array;
     }
 

@@ -3,6 +3,8 @@ package com.danielvaughan.example.sort;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Random;
+
 import static org.junit.Assert.assertArrayEquals;
 
 public class QuicksortTest {
@@ -27,5 +29,17 @@ public class QuicksortTest {
     @Test
     public void given_47556_return_12345() throws Exception {
         assertArrayEquals(new int[]{4, 5, 5, 6, 7}, sort.sort(new int[]{4, 7, 5, 5, 6}));
+    }
+
+    @Test
+    public void given_ten_million_sort() throws Exception {
+        Random random = new Random();
+        int num = 10000000;
+        int[] ints = new int[num];
+        for (int i=0; i< num; i++)
+        {
+            ints[i] = random.nextInt();
+        }
+        sort.sort(ints);
     }
 }

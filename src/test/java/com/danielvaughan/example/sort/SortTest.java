@@ -12,6 +12,11 @@ public abstract class SortTest {
     protected int largeSortSize  = 10_000_000;
 
     @Test
+    public void given_1_return_1() throws Exception {
+        assertArrayEquals(new int[]{1}, sort.sort(new int[]{1}));
+    }
+
+    @Test
     public void given_321_return_123() throws Exception {
         assertArrayEquals(new int[]{1, 2, 3}, sort.sort(new int[]{3, 2, 1}));
     }

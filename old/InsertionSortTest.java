@@ -3,7 +3,7 @@ package com.danielvaughan.example.sort;
 import org.junit.Before;
 import org.junit.Ignore;
 
-@Ignore
+
 public class InsertionSortTest extends SortTest {
 
     @Before

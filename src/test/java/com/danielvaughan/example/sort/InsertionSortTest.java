@@ -2,12 +2,11 @@ package com.danielvaughan.example.sort;
 
 import org.junit.Before;
 
-public class BubbleSortTest extends SortTest {
+public class InsertionSortTest extends SortTest {
 
     @Before
     public void setUp() throws Exception {
-        sort = new BubbleSort();
-        largeSortSize = 10000;
+        sort = new InsertionSort();
+        largeSortSize = 1;
     }
-
 }

@@ -1,7 +1,9 @@
 group 'cam.danielvaughan.example'
 version '1.0-SNAPSHOT'
 
+apply plugin: 'idea'
 apply plugin: 'java'
+apply plugin: 'scala'
 
 sourceCompatibility = 1.8
 
@@ -10,5 +12,7 @@ repositories {
 }
 
 dependencies {
+    compile 'org.scala-lang:scala-library:2.11.7'
+    testCompile group: 'org.scalatest', name: 'scalatest_2.11', version: '2.2.5'
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
